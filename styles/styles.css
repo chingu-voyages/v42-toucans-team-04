@@ -145,16 +145,17 @@ h5{
     margin: 0;
   }
   
-  .sidebar a {
+  .sidebar p {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
+    text-transform: capitalize;
   }
   
-  .sidebar a:hover {
+  .sidebar p:hover {
     color: #f1f1f1;
   }
   
