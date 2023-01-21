@@ -28,127 +28,122 @@
     <script src="js/index.js"></script>
   </head>
 
-  <button id="open">
-    How To Chuck
-  </button>
-  
-  <div class="modal-container" id="modal-container">
-  <div class="modal">
-  <h1>Welcome to Chuck Norris Mythos!</h1>
-  <pre>
-  Choose a category to see a fact about the iconic Ranger
-           
-  “R” to refresh your screen for a new fact in that category
-  
-  Or choose “Surprise Me!” for a random, awesome fact!
-  </pre>
-  <button id="close">
-  Let's CHUCK
-  </button>
-    </div>  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Welcome To Chuck Norris Mythos!</h5>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Choose a category to see a fact about the iconic Ranger</li>   
+          <li>“R” to refresh your screen for a new fact in that category</li>          
+          <li>Choose “Surprise Me!” for a random, awesome fact!</li> 
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Let's Chuck!</button>
+      </div>
+    </div>
   </div>
+</div>
 
-  <body>
-    <div id="mySidebar" class="sidebar">
-        <p class="closebtn"  onclick="closeNav()">Categories</p>
-      </div>
-      
+<body>
+  <div id="mySidebar" class="sidebar">
+      <p class="closebtn"  onclick="closeNav()">Categories</p>
+    </div>
+    
 
-    <div class="page">
-      <!-- Nav -->
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-center"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseWidthExample"
-                  aria-expanded="false"
-                  aria-controls="collapseWidthExample"
-                  class="openbtn" onclick="openNav()"
-                  >Categories</a
-                >
-              </li>
-              <li class="nav-item">
-                <button class="btn-outline surprise-btn">
-                  <a class="nav-link-btn" href="#">Surprise Me!</a>
-                </button>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">How to Chuck</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- Main -->
-      <div class="row">
-        <div class="col">
-          <div id="main-heading">
-            <h1>
-              Chuck Norris<br />
-              Mythos
-            </h1>
-          </div>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample"
+                aria-expanded="false"
+                aria-controls="collapseWidthExample"
+                class="openbtn" onclick="openNav()"
+                >Categories</a
+              >
+            </li>
+            <li class="nav-item">
+              <button class="btn-outline surprise-btn">
+                <a class="nav-link-btn" href="#">Surprise Me!</a>
+              </button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  data-bs-toggle="modal" data-bs-target="#exampleModal">How to Chuck</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <!-- Chuck Image -->
-      <div class="row">
-        <div class="col">
-          <div id="main-image">
-            <img class="main-image" src="styles/images/chuck norris .png" />
-          </div>
-        </div>
-        <!-- KickImage -->
-        <div class="col">
-          <div id="kick-image">
-            <img class="kick-image" src="styles/images/kick.png" />
+    </nav>
+    <!-- Main -->
+    <div class="content">
+      <div class="chuck-container">
+            <div id="main-heading">
+              <h1>
+                Chuck Norris<br />
+                Mythos
+              </h1>
+            </div>
+            <div id="main-image">
+              <img class="main-image" src="styles/images/chuck norris .png" />
+            </div>
+            </div>
+            <!-- KickImage -->
+            <div id="kick-image">
+              <img class="kick-image" src="styles/images/kick.png" />
             </div>
           </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center"
+      >
+        <div class="container-fluid fixed-bottom">
+          <ul class="nav col-md-12 justify-content-center list-unstyled">
+            <li class="ms-3">
+              <a><i class="fa-brands fa-github"></i></a>
+            </li>
+            <li class="ms-3">
+              <a
+                ><button type="button" class="btn btn-outline-light">
+                  Meet The Rangers
+                </button>
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-      <!-- Footer -->
-      <div class="container">
-        <footer
-          class="d-flex flex-wrap justify-content-between align-items-center"
-        >
-          <div class="container-fluid fixed-bottom">
-            <ul class="nav col-md-12 justify-content-center list-unstyled">
-              <li class="ms-3">
-                <a><i class="fa-brands fa-github"></i></a>
-              </li>
-              <li class="ms-3">
-                <a
-                  ><button type="button" class="btn btn-outline-light">
-                    Meet The Rangers
-                  </button>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </footer>
-    <!-- Javascript -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      </footer>
+    </div>
+  <!-- Javascript -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+</body>
 </html>
