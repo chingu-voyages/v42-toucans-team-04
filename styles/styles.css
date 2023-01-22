@@ -10,11 +10,19 @@
 }
 
 /* Element Selectors */
+a{
+    text-decoration: none;
+}
 
 
 body {
     font-family: var(--body-text);
     color: var(--text-color);  
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1%;
+    background: url(images/chuckbackground.png);
+    background-size: cover;
 
 }
 
@@ -22,6 +30,7 @@ h1 {
     font-family: var(--heading-text);
     color: var(--branding-color);
     margin-left: -5%;
+    text-align: center;
 
 }
 h5{
@@ -31,15 +40,19 @@ h5{
 /* ID tags */
  #main-heading{
     padding-top: 25px;
-    margin-left: 50px;
+    
  }
  
 /* Alphabetized classes */
 
+.btn-close{
+    font-size: 2rem;
+    color: #818181;
+}
+
  .card{
-  margin-top: -75%;  
-  margin-left: -15%;
-  border-radius: 40px;
+  width: 50%;
+  border-radius: 30px;
   background-color: var(--modal-color);
 }
 
@@ -79,6 +92,7 @@ h5{
 }
 
 .kick-image{
+    margin-top: 20%;
     width: 65%;
     height: 65%;
     rotate: -50deg;
@@ -95,7 +109,7 @@ h5{
    display: flex;
 }
 .nav-link {
-    color: var(--text-color);
+    color: var(--main-color);
 }
 .nav-item {
 padding-left: 20px;
@@ -162,8 +176,7 @@ padding-right: 20px;
   
   .sidebar .closebtn {
     position: absolute;
-    top: 0;
-    
+    top: 0; 
     font-size: 36px;
     margin: auto;
   }
