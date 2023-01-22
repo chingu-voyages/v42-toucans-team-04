@@ -1,18 +1,26 @@
+
+
 // Open modal on page load
-// $(document).ready(function(){
-//     $("#exampleModal").modal('show');
-// });
+$(document).ready(function(){
+    $("#exampleModal").modal('show');
 
-// Close directions
-function closeDirections(){
-    document.querySelector('.card').style.display='none';
-}
+    // Open/Close Categories
 
-// Open/Close Categories
-function openNav() {
-    document.getElementById("mySidebar").style.width = "260px";
-  }
+    $('.nav-link-category').click(function(){
+        $('#mySidebar').toggleClass('sidebarOpen');
+       
+    });
+
+    $('.closebtn').click(function(){
+        $('#mySidebar').toggleClass('sidebarOpen');
+    })
+ 
+});
+
+
+
+
   
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-}
+// function closeNav() {
+//   document.getElementById("mySidebar").style.width = "0";
+// }
