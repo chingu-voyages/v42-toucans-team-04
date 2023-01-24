@@ -56,6 +56,10 @@ h5{
   background-color: var(--modal-color);
 }
 
+.category-btn{
+    display: flex;
+}
+
 #exampleModalLabel{
     text-decoration: none;
     color: var(--branding-color)
@@ -107,14 +111,30 @@ h5{
 .navbar{
    align-items: center;
    display: flex;
+
+   
+}
+
+.nav-item {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+.nav-link-category{
+    color: var(--main-color);
+    cursor: pointer;
+    
+}
+.nav-link-category:hover{
+    color: var(--branding-color);
+}
+.nav-link-category:active{
+    color: var(--branding-color);
 }
 .nav-link {
     color: var(--main-color);
+    cursor: pointer;
 }
-.nav-item {
-padding-left: 20px;
-padding-right: 20px;
-}
+
 
 .nav-link:active {
     color: var(--branding-color);
@@ -159,6 +179,10 @@ padding-right: 20px;
     padding-top: 60px;
     margin: 0;
   }
+
+  .sidebarOpen{
+    width: 260px;
+  }
   
   .sidebar p {
     padding: 8px 8px 8px 32px;
@@ -175,10 +199,12 @@ padding-right: 20px;
   }
   
   .sidebar .closebtn {
-    position: absolute;
     top: 0; 
-    font-size: 36px;
-    margin: auto;
+    font-size: 1rem;
+    margin-top: -40px;
+    margin-left: 30px;
+    cursor: pointer;
+
   }
   
   .openbtn {

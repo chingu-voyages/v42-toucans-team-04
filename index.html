@@ -18,7 +18,7 @@
     rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/ba09da393d.js" crossorigin="anonymous"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/api.js"></script>
 </head>
@@ -37,9 +37,8 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
-              aria-expanded="false" aria-controls="collapseWidthExample" class="openbtn"
-              onclick="openNav()">Categories</a>
+            <a class="nav-link nav-link-category" 
+             >Categories</a>
           </li>
           <li class="nav-item">
             <button class="btn-outline surprise-btn">
@@ -78,10 +77,11 @@
 
   <!-- Categories Sidebar -->
   <div id="mySidebar" class="sidebar">
-    <p class="closebtn" onclick="closeNav()">Categories <button class="closebtn" aria-label="Close" style="font-size: 1rem;
-        margin-top: 20px;
-        margin-left: 10px;">X</button>
-    </p>
+    <div class="category-btn">
+      <p>Categories </p>
+      <p class="closebtn" >X</p>
+    </div>
+   
   </div>
 
   <!-- Dropdown Modal -->
