@@ -220,3 +220,32 @@ h5{
     background-color: #444;
   }
   /* ==================================================================================== */
+ 
+  /* Jokes styling */
+
+  .jokes{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-inline-start: 10%;
+    margin-top: 5%;
+    width: 80%;
+    font: var(--body-text);
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
+  }
+
+  @media (max-width: 900px){ 
+    /* //tablet size screens */
+    .jokes{
+        font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 500px){
+     /* //mobile screens */
+    .jokes{
+        font-size: 1.5rem;
+        margin-top: 15%;
+    }
+  }
