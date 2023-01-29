@@ -26,12 +26,15 @@ function loadCategories(listOfCategories) {
     //create the element and append to sideBar
     let p = document.createElement("p");
     p.innerHTML = category;
+    p.id = "category-" + index;
     p.setAttribute("onclick", "getCategory(" + index + ")");
     items.append(p)
     index++;
   });
 }
 
+var globaCategoryIndex;
+var previousCategoryIndex;
 function getCategory(index) {
   //Get the select <p> element base on the global categories and index
   let item = categories[index];
@@ -41,8 +44,23 @@ function getCategory(index) {
     })
     .then(joke => {
       //writing to console for now until future functionailty is created
-      console.log(joke)
+      showJoke(joke);
+      
+      //remove highlight from selected category
+      if(typeof previousCategoryIndex !== 'undefined'){
+        let p = document.getElementById("category-" + previousCategoryIndex);
+      p.style.color = "#818181";
+      }
+  
+      // highlight the selected category
+      globaCategoryIndex = index;
+      let p = document.getElementById("category-" + index);
+      p.style.color = "#f1f1f1";
+      if(previousCategoryIndex !== index){
+        previousCategoryIndex = index;
+      }
     })
+    
 }
 
 function removeDevCategoryFromList(listOfCategories) {
@@ -75,6 +93,13 @@ function showJoke(joke) {
   document.querySelector('.jokes').innerHTML = jokeBox;
 }
 
-
+//Listener for the 'R' Key up event to show new joke in same category
+document.addEventListener('keyup', event => {
+  if (event.code === 'KeyR') {
+    if(typeof globaCategoryIndex !== 'undefined'){
+      getCategory(globaCategoryIndex);
+    }
+  }
+})
 
 
