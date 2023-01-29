@@ -96,6 +96,53 @@
     </div>
   </div>
 
+  <!-- Meet The Rangers Modal -->
+  <div class="modal fade" id="mtr-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" id="mtr-container">
+        <div id="rangersTitle">
+          <h5>The Rangers (AKA Developers)</h5>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-3">
+              <img class="meetTheRangers-pfp" src="styles\images\anthony-pfp.JPG">
+                <div class="ranger-info" id="anthony-pfp">
+                  <strong>Anthony</strong>
+                  <br>
+                  Dreams of one day cage diving with sharks
+                </div>  
+            </div>
+            <div class="col-3">
+              <img class="meetTheRangers-pfp" src="styles\images\austin-pfp.jpeg">
+                <div class="ranger-info" id="austin-pfp">
+                  <strong>Austin</strong>
+                  <br>
+                  Has once stared a hole in a wall. Literally
+                </div>
+            </div>
+            <div class="col-3">
+              <img class="meetTheRangers-pfp" src="styles\images\jaida-pfp.jpeg">
+                <div class="ranger-info" id="jaida-pfp">
+                  <strong>Jaida</strong>
+                  <br>
+                  Once faked a stomach ache to get out of the school play
+                </div>
+            </div>
+            <div class="col-3">
+              <img class="meetTheRangers-pfp" src="styles\images\tyre-pfp.jpg">
+                <div class="ranger-info" id="tyre-pfp">
+                  <strong>Tyre</strong>
+                  <br>
+                  I used to believe that I could breathe underwater. I tested this theory for multiple summers as a child
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center">
@@ -106,10 +153,9 @@
                 class="fa-brands fa-github"></i></a>
           </li>
           <li class="ms-3">
-            <a><button type="button" class="btn btn-outline-light">
+            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#mtr-modal">
                 Meet The Rangers
-              </button>
-            </a>
+            </button>
           </li>
         </ul>
       </div>
