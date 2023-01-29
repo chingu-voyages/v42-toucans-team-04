@@ -25,8 +25,8 @@ fetch('https://api.chucknorris.io/jokes/categories')
 function loadCategories(listOfCategories){
   let items = document.getElementById("mySidebar");
 
-  //remove dev category
-  listOfCategories = removeDevCategoryFromList(listOfCategories);
+  //remove category
+  listOfCategories = removeCategoryFromList(listOfCategories);
 
     let index = 0;
     //loop through list of categories
@@ -53,11 +53,24 @@ function getCategory(index){
     console.log(joke)
   })
 }
-
-function removeDevCategoryFromList(listOfCategories){
-  let itemToRemove = listOfCategories.indexOf("dev");
+function removeCategoryFromList(listOfCategories){
+  let itemToRemove = listOfCategories.indexOf("religion")
   if (itemToRemove !== -1) {
-    listOfCategories.splice(itemToRemove, 1);
+    listOfCategories.splice(itemToRemove, 3);
+  }
+  return listOfCategories;
+}
+function removeCategoryFromList(listOfCategories){
+  let itemToRemove = listOfCategories.indexOf("political")
+  if (itemToRemove !== -1) {
+    listOfCategories.splice(itemToRemove, 3);
+  }
+  return listOfCategories;
+}
+function removeCategoryFromList(listOfCategories){
+  let itemToRemove = listOfCategories.indexOf("explicit")
+  if (itemToRemove !== -1) {
+    listOfCategories.splice(itemToRemove, 3);
   }
   return listOfCategories;
 }
