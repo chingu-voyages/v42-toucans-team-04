@@ -121,6 +121,11 @@ h5{
     font-size: 2rem;  
 }
 
+.input-group{
+    width: 20%;
+    
+}
+
 .kick-image{
     margin-top: 20%;
     width: 65%;
@@ -208,6 +213,11 @@ h5{
 .ranger-info {
     display: none;
     text-align: center;
+}
+
+.search{
+    justify-content: center;
+    display: flex;
 }
 
 .surprise-btn {
