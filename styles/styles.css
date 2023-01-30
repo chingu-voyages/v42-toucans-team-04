@@ -243,6 +243,7 @@ h5{
     transition: 0.5s;
     padding-top: 60px;
     margin: 0;
+    cursor: pointer;
   }
 
   .sidebarOpen{
@@ -261,8 +262,8 @@ h5{
   
   .sidebar p:hover {
     color: #f1f1f1;
+    
   }
-  
 
   .sidebar .closebtn {
     top: 0; 
@@ -291,7 +292,7 @@ h5{
 
   .jokes{
     display: flex;
-    text-align: center;
+    justify-content: center;
     flex-wrap: wrap;
     margin-inline-start: 10%;
     margin-top: 5%;
