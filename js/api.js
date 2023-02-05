@@ -86,33 +86,27 @@ async function getRandom(url) {
   const response = await fetch("https://api.chucknorris.io/jokes/random");
   // Store data in form of JSON
   let joke = await response.json();
+
   // Call render function
   showJoke(joke);
 }
 
-
 // Display joke on screen
 function showJoke(joke) {
-  // Access value in joke object 
-  let jokeBox =  document.querySelector(".jokes");
+  // Access value in joke object
+  let jokeBox = document.querySelector(".jokes");
   let jokes = `<p class="jokeText">${joke.value}</p`;
- jokeBox.innerHTML = jokes;
+  jokeBox.innerHTML = jokes;
 
-// showContentAfter1Second();
+  // showContentAfter1Second();
 }
-  // animation
+// animation
 // function showContentAfter1Second(){
 //   setTimeout(() => {
 //     let jokeText =  document.querySelector(".jokes");
 //  jokeText.style.top = 15;
 // }, 1000);
 // }
-
-
-
-
-  
-
 
 //Listener for the 'R' Key up event to show new joke in same category
 document.addEventListener("keyup", (event) => {
@@ -122,3 +116,23 @@ document.addEventListener("keyup", (event) => {
     }
   }
 });
+
+// Input string query
+
+const queryUrl = "https://api.chucknorris.io/jokes/search?query={query}";
+
+
+async function search() {
+  let index =0;
+  let input = document.querySelector(".form-control").value;
+  let results = await fetch(
+    `https://api.chucknorris.io/jokes/search?query=${input}`
+  );
+  let searchedJoke = await results.json();
+
+
+  //  Writing to console
+  console.log(searchedJoke);
+
+  }
+  

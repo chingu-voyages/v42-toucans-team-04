@@ -22,6 +22,7 @@ body {
     margin-top: 1%;
     background: url(images/chuckbackground.png);
     background-size: cover;
+    background-position: center center;
 
 }
 
@@ -30,6 +31,7 @@ h1 {
     color: var(--branding-color);
     margin-left: -5%;
     text-align: center;
+  
 
 }
 h5{
@@ -58,7 +60,7 @@ h5{
 }
 
 #main-heading{
-    padding-top: 25px;
+   margin-left: 5%;
  }
  
  #meetTheRangers-btn {
@@ -114,7 +116,6 @@ h5{
 .fixed-bottom{
     background-color: var(--branding-color);
     color: var(--main-color);
-    height: 7%; 
 }
 
 .fixed-bottom i{
@@ -122,8 +123,12 @@ h5{
 }
 
 .input-group{
-    width: 22%;
-    
+    min-width: 10%;
+    flex-wrap: none !important;
+}
+.input-open{
+    margin-inline-start: 23%;
+    margin-inline-end: 23%;
 }
 
 .kick-image{
@@ -167,8 +172,8 @@ h5{
     flex-direction: column;
 }
 
-.navbar{
-   align-items: center;
+.navbar-nav{
+   justify-content: center;
    display: flex;   
 }
 
@@ -238,7 +243,7 @@ h5{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color:#111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -247,13 +252,13 @@ h5{
   }
 
   .sidebarOpen{
-    width: 260px;
+    width: 200px;
   }
   
   .sidebar p {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -274,18 +279,7 @@ h5{
 
   }
   
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: #444;
-  }
+ 
   /* ==================================================================================== */
  
   /* Jokes styling */
@@ -295,25 +289,77 @@ h5{
     justify-content: center;
     flex-wrap: wrap;
     margin-inline-start: 10%;
-    margin-top: 5%;
     width: 80%;
+    height: 100%;
     font: var(--body-text);
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-color);
     text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
   }
+
+  .jokes-open{
+
+    margin-inline-start: 23%;
+    width: 50%;
+     
+  }
+  /* .jokesAnimate{
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  } */
 
   @media (max-width: 900px){ 
     /* //tablet size screens */
     .jokes{
         font-size: 1.5rem;
+        text-align: center;
     }
+    .sidebarOpen{
+        width: 130px;
+    }
+    
+      
+  .sidebar p, .closebtn{
+    font-size: 16px;
+    padding: 4px 4px 4px 16px;
+  }
   }
   @media (max-width: 500px){
      /* //mobile screens */
     .jokes{
-        font-size: 1.5rem;
-        margin-top: 15%;
+        font-size: 1.3rem;
+       
+    }
+    .sidebarOpen{
+        width: 90px;
     }
   }
 

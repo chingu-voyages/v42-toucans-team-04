@@ -6,14 +6,17 @@ $(document).ready(function () {
 
   $(".nav-link-category").click(function () {
     $("#mySidebar").toggleClass("sidebarOpen");
+    $("#jokes").toggleClass("jokes-open");
+    $(".input-group").toggleClass("input-open");
   });
 
   $(".closebtn").click(function () {
     $("#mySidebar").toggleClass("sidebarOpen");
+    $("#jokes").toggleClass("jokes-open");
+    $(".input-group").toggleClass("input-open");
+   
   });
-  $(".category-btn").click(function () {
-    $("#mySidebar").removeClass("sidebarOpen");
-  });
+  
   $(".surprise-btn").click(function () {
     $(".jokes").fadeIn("slow", function () {});
   });
