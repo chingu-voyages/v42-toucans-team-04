@@ -83,6 +83,7 @@
               <div class="container-fluid search">
                 <div class="input-group mb-3">
                   <input
+                    id="#searchInput"
                     type="text"
                     class="form-control"
                     placeholder="Search for a joke"
@@ -90,7 +91,7 @@
                     aria-describedby="basic-addon2"
                   />
                   <div class="input-group-append">
-                    <button class="btn-outline surprise-btn" type="button">Search</button>
+                    <button class="btn-outline surprise-btn" type="button" onclick="search()">Search</button>
                   </div>
                   <input type="button" value = "Start Over" onclick="history.go(0)" />
                 </div>

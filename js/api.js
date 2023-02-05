@@ -123,16 +123,18 @@ const queryUrl = "https://api.chucknorris.io/jokes/search?query={query}";
 
 
 async function search() {
-  let index =0;
-  let input = document.querySelector(".form-control").value;
+  let input = document.getElementById("#searchInput").value;
   let results = await fetch(
     `https://api.chucknorris.io/jokes/search?query=${input}`
   );
-  let searchedJoke = await results.json();
-
-
-  //  Writing to console
-  console.log(searchedJoke);
-
+  let response = await results.json();
+  let isCleanJoke = false;
+  let index = Math.floor(Math.random() * response.result.length);
+  while(isCleanJoke === false){
+    if(response.result[index].categories !== 'explicit'){
+      isCleanJoke = true;
+    }
+    showJoke(response.result[index]);
   }
+}
   
