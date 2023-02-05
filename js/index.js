@@ -1,28 +1,23 @@
-
-
 // Open modal on page load
-$(document).ready(function(){
-    $("#exampleModal").modal('show');
+$(document).ready(function () {
+  $("#exampleModal").modal("show");
 
-    // Open/Close Categories
+  // Open/Close Categories
 
-    $('.nav-link-category').click(function(){
-        $('#mySidebar').toggleClass('sidebarOpen');
-       
-    });
+  $(".nav-link-category").click(function () {
+    $("#mySidebar").toggleClass("sidebarOpen");
+    $("#jokes").toggleClass("jokes-open");
+    $(".input-group").toggleClass("input-open");
+  });
 
-    $('.closebtn').click(function(){
-        $('#mySidebar').toggleClass('sidebarOpen');
-    })
- 
-});
-
-
-
-
-
-
+  $(".closebtn").click(function () {
+    $("#mySidebar").toggleClass("sidebarOpen");
+    $("#jokes").toggleClass("jokes-open");
+    $(".input-group").toggleClass("input-open");
+   
+  });
   
-// function closeNav() {
-//   document.getElementById("mySidebar").style.width = "0";
-// }
+  $(".surprise-btn").click(function () {
+    $(".jokes").fadeIn("slow", function () {});
+  });
+});
