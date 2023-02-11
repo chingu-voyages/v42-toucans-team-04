@@ -28,7 +28,7 @@ Chuck Norris Mythos generates endless "facts" about the famous Texas Ranger! Thi
 
 - Icons from [Font Awesome](https://fontawesome.com/)
 
-- Project credit to [Chingu] (https://www.chingu.io/)
+- Project credit to [Chingu](https://www.chingu.io/)
 
 ## Contribute
 
