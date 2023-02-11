@@ -6,15 +6,20 @@ $(document).ready(function () {
 
   $(".nav-link-category").click(function () {
     $("#mySidebar").toggleClass("sidebarOpen");
-    $("#jokes").toggleClass("jokes-open");
-    $(".input-group").toggleClass("input-open");
+    if ($(window).width() < 960) {
+      $("#jokes").toggleClass("jokes-open");
+   $(".input-group").toggleClass("input-open");
+  }
+  
   });
 
   $(".closebtn").click(function () {
     $("#mySidebar").toggleClass("sidebarOpen");
-    $("#jokes").toggleClass("jokes-open");
+    if ($(window).width() < 960) {
+       $("#jokes").toggleClass("jokes-open");
     $(".input-group").toggleClass("input-open");
-   
+   }
+    
   });
   
   $(".surprise-btn").click(function () {

@@ -117,6 +117,8 @@ h5{
 .fixed-bottom{
     background-color: var(--branding-color);
     color: var(--main-color);
+    padding-top: 10px; 
+    padding-bottom: 5px;
 }
 
 .fixed-bottom i{
@@ -124,7 +126,7 @@ h5{
 }
 
 .input-group{
-    min-width: 10%;
+   
     flex-wrap: none !important;
 }
 .input-open{
@@ -257,7 +259,7 @@ h5{
   }
 
   .sidebarOpen{
-    width: 200px;
+    width: 150px;
   }
   
   .sidebar p {
@@ -291,8 +293,8 @@ h5{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-inline-start: 10%;
-    width: 80%;
+    margin-inline-start: 13%;
+    width: 70%;
     height: 100%;
     font: var(--body-text);
     font-size: 2rem;
@@ -333,8 +335,27 @@ h5{
        
     }
     .sidebarOpen{
-        width: 90px;
+        width: 80px;
     }
+    .sidebar p, .closebtn{
+        font-size: 14px;
+        padding: 4px 4px 4px 16px;
+      }
+      .fixed-bottom i{
+        font-size: 1.5rem;
+        padding: 5px;  
+    }
+    .fixed-bottom{
+       padding-top: 0; 
+       padding-bottom: 0; 
+    }
+    .fixed-bottom button{
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 5px;  
+    }
+    
+    
   }
 
 @media screen and (max-width: 500px) {
