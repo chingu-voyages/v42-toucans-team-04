@@ -98,21 +98,24 @@ function showJoke(joke) {
   let jokes = `<p class="jokeText">${joke.value}</p`;
   jokeBox.innerHTML = jokes;
 
-  // showContentAfter1Second();
+
 }
-// animation
-// function showContentAfter1Second(){
-//   setTimeout(() => {
-//     let jokeText =  document.querySelector(".jokes");
-//  jokeText.style.top = 15;
-// }, 1000);
-// }
+
 
 //Listener for the 'R' Key up event to show new joke in same category
 document.addEventListener("keyup", (event) => {
   if (event.code === "KeyR") {
     if (typeof globaCategoryIndex !== "undefined") {
       getCategory(globaCategoryIndex);
+    }
+  }
+});
+//Listener for the 'R' Key up event to show new random joke 
+document.addEventListener("keyup", (event) => {
+  let jokeBox = document.querySelector(".jokes");
+  if (event.code === "KeyR") {
+    if( jokeBox.innerHTML != ''){
+      getRandom();
     }
   }
 });
