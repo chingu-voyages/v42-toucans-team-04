@@ -3,7 +3,7 @@
 
 ## Overview
 
-Chuck Norris Mythos generates endless "facts" about the famous Texas Ranger! This app was developed as part of Chingu Voyage 42 collaboration.
+Chuck Norris Mythos generates endless "facts" about the famous Texas Ranger! This app was developed as part of [Chingu]((https://www.chingu.io/) Voyage 42 collaboration.
 
 #### LIVE LINK : https://chucksays.netlify.app/#
 
