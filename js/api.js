@@ -86,7 +86,9 @@ async function getRandom(url) {
   const response = await fetch("https://api.chucknorris.io/jokes/random");
   // Store data in form of JSON
   let joke = await response.json();
-
+  if(joke.categories === "explicit"){
+    getRandom(url)
+  }
   // Call render function
   showJoke(joke);
 }
