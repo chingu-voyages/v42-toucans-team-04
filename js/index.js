@@ -7,22 +7,25 @@ $(document).ready(function () {
   $(".nav-link-category").click(function () {
     $("#mySidebar").toggleClass("sidebarOpen");
     if ($(window).width() < 960) {
-      $("#jokes").toggleClass("jokes-open");
-   $(".input-group").toggleClass("input-open");
+      if($('#mySidebar').hasClass("sidebarOpen")){
+      $("#jokes").addClass("jokes-open");
+   $(".input-group").addClass("input-open");
+  } else {
+    $("#jokes").removeClass("jokes-open");
+    $(".input-group").removeClass("input-open");
   }
-  
+} 
   });
 
   $(".closebtn").click(function () {
     $("#mySidebar").toggleClass("sidebarOpen");
     if ($(window).width() < 960) {
-       $("#jokes").toggleClass("jokes-open");
-    $(".input-group").toggleClass("input-open");
-   }
+      $("#jokes").removeClass("jokes-open");
+   $(".input-group").removeClass("input-open");
+    }
+   
+  
     
   });
-  
-  $(".surprise-btn").click(function () {
-    $(".jokes").fadeIn("slow", function () {});
-  });
 });
+  
